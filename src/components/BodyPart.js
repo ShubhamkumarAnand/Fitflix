@@ -1,5 +1,5 @@
 import {Stack, Typography} from '@mui/material'
-import icon from '../assets/icons/gym.png'
+import Icon from '../assets/icons/gym.png'
 
 const BodyParts = ({item, bodyPart, setBodyPart}) => {
   return (
@@ -17,8 +17,13 @@ const BodyParts = ({item, bodyPart, setBodyPart}) => {
         cursor: 'pointer',
         gap: '47px'
       }}
+      onClick={() => {
+        setBodyPart(item)
+        window.scrollTo({top: 1800, left: 100, behavior: 'smooth'})
+      }}
     >
-      <img src={icon} alt='Gym' styles={{width: '40px', height: '40px'}} />
+      <img src={Icon} alt='dumbbell' style={{width: '40px', height: '40px'}} />
+      <Typography fontSize='24px' fontWeight='bold' color='#3A1212' fontFamily="Alegreya" textTransform='capitalize'>{item}</Typography>
     </Stack>
   )
 }
