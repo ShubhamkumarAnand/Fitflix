@@ -70,6 +70,9 @@ const SearchExercises = () => {
           Search
         </Button>
       </Box>
+      <Box sx={{position: 'relative', width: '100%', p: '20px'}}>
+        <HorizantalScrollBar data={bodyParts} />
+      </Box>
     </Stack>
 
   )
