@@ -1,9 +1,8 @@
 import {useEffect, useState} from 'react'
-import {Box, Stack, Typography} from '@mui/icons-material'
+import {Box, Stack, Typography} from '@mui/material'
 import {Pagination} from '@mui/material/Pagination'
-
 import {exerciseOptions, fetchData} from '../utils/fetchData'
-import ExerciseCard from './ExerciseCard'
+import ExerciseCard from './ExerciseCard.js'
 
 const Exercises = ({exercises, setExercises, bodyParts}) => {
   console.log(exercises);
