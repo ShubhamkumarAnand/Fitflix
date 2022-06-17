@@ -7,3 +7,7 @@
 ## Search Exercises
 
 ![Search Exercises](/Github_Output/SearchExercises.png)
+
+## Exercises Cards
+
+![Exercises Card](/Github_Output/ExercisesCard.png)
