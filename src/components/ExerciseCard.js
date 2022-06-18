@@ -3,6 +3,7 @@ import {Button, Stack, Typography} from '@mui/material'
 
 const ExerciseCard = ({exercise}) => {
   return (
+    // The whole card is clickable to the details page which shows the GIF bodyPart associated target muscle as well as the name of the exercise
     <Link className='exercise-card' to={`/exercise/${exercise.id}`}>
       <img src={exercise.gifUrl} alt={exercise.name} loading='lazy' />
       <Stack direction='row'>

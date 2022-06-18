@@ -4,6 +4,7 @@ import {Pagination} from '@mui/material/Pagination'
 import {exerciseOptions, fetchData} from '../utils/fetchData'
 import ExerciseCard from './ExerciseCard.js'
 
+// The Pagination and the Logic is done here
 const Exercises = ({exercises, setExercises, bodyPart}) => {
   const [currentPage, setCurrentPage] = useState(1)
   const exercisesPerPage = 9

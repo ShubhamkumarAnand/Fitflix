@@ -1,6 +1,7 @@
 import {Box,  Typography, Button} from '@mui/material'
 import HeroBannerImg from '../assets/images/banner.png'
 
+// The Homepage banner is shown here with Button and Banner Image
 const HeroBanner = () => {
   return (
     <Box sx={{
@@ -28,7 +29,7 @@ const HeroBanner = () => {
           opacity: 0.1,
           display: {lg: 'block', sm: 'none'}
         }}
-        fontSize='200px'
+        fontSize='220px'
       >
         Exercise
       </Typography>

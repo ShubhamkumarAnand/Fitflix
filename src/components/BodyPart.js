@@ -22,6 +22,7 @@ const BodyPart = ({item, bodyPart, setBodyPart}) => {
         window.scrollTo({top: 1800, left: 100, behavior: 'smooth'})
       }}
     >
+      {/* Here we are showing the Image as well as the bodyPart associated with the exercises fetched from the API */}
       <img src={Icon} alt='dumbbell' style={{width: '40px', height: '40px'}} />
       <Typography fontSize='24px' fontWeight='bold' color='#3A1212' fontFamily="Alegreya" textTransform='capitalize'>{item}</Typography>
     </Stack>
