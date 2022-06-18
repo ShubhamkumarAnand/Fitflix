@@ -5,7 +5,18 @@ import {exerciseOptions, fetchData} from '../utils/fetchData'
 import ExerciseCard from './ExerciseCard.js'
 
 const Exercises = ({exercises, setExercises, bodyParts}) => {
-  console.log(exercises);
+  const [currentPage, setCurrentPage] = useState(1)
+  const exercisesPerPage = 9
+
+  const indexOfLastExercise = currentPage * exercisesPerPage
+  const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage
+  const currentExercises = exercises.slice(indexOfFirstExercise,indexOfLastExercise)
+
+  const paginate = (e, value) => {
+    setCurrentPage(value)
+
+    window.scrollTo({top: 1800, behavior: 'smooth'})
+  }
   return (
     <Box id='exercises'
       sx={{mt: {lg: '110px'}}}
@@ -18,9 +29,22 @@ const Exercises = ({exercises, setExercises, bodyParts}) => {
       <Stack
         direction='row' flexWrap='wrap' justifyContent='center' sx={{gap: {lg: '110px', sx: '50px'}}}
       >
-        {exercises.map((exercise, index) => (
+        {currentExercises.map((exercise, index) => (
           <ExerciseCard key={index} exercise={exercise} />
         ))}
+      </Stack>
+      <Stack mt='100px' alignItems='center'>
+        {exercises.length > 9 && (
+          <Pagination
+            color='standard'
+            shape='rounded'
+            count={Math.ceil(exercises.length / exercisesPerPage)}
+            defaultPage={1}
+            page={currentPage}
+            onChange={paginate}
+            size='large'
+          />
+        )}
       </Stack>
     </Box>
   )
