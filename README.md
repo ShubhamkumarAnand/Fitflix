@@ -1,4 +1,4 @@
-# FitFlix
+# FitFlix : A Netflix for the people who like to be fit
 
 ## Home Page
 
